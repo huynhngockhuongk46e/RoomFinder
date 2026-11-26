@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.qnu-login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.qnu-left-bg {
+  flex: 2;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.qnu-right-panel {
+  flex: 1;
+  background-color: #d8d8da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 17px;
+  position: relative;
+}
+
+.qnu-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.qnu-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.qnu-university-name,
+.qnu-portal-name {
+  font-family: serif;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.qnu-university-name {
+  font-size: 16px;
+}
+
+.qnu-portal-name {
+  font-size: 21px;
+  margin-top: 4px;
+}
+
+.qnu-login-card {
+  background: white;
+  padding: 24px 22px 28px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.qnu-title {
+  color: #b91c1c;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.qnu-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.qnu-form-group {
+  margin-bottom: 20px;
+}
+
+.qnu-form-group label {
+  display: block;
+  font-size: 14px;
+  color: #b91c1c;
+  margin-bottom: 8px;
+}
+
+.qnu-form-group input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.qnu-form-group input:focus {
+  border-color: #1e3a8a;
+}
+
+.qnu-form-group select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  background: white;
+}
+
+.qnu-form-group select:focus {
+  border-color: #1e3a8a;
+}
+
+.qnu-auth-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.qnu-auth-links-center {
+  justify-content: center;
+}
+
+.qnu-auth-links a {
+  color: #1e3a8a;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.qnu-input-error {
+  border-color: #ef4444 !important;
+}
+
+.qnu-error-text {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.qnu-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.qnu-message-error {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.qnu-message-success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.qnu-register-link {
+  margin-top: 20px;
+}
+
+.qnu-register-link a {
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.qnu-register-button {
+  margin-top: 10px;
+}
+
+.qnu-btn-primary,
+.qnu-btn-google {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qnu-btn-primary {
+  padding: 12px;
+  background-color: #173b70;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.qnu-btn-primary:hover {
+  background-color: #152c69;
+}
+
+.qnu-btn-google {
+  padding: 10px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.qnu-btn-google img {
+  width: 20px;
+}
+
+.qnu-forgot-password {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qnu-forgot-password a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.qnu-settings {
+  position: fixed;
+  right: 24px;
+  bottom: 22px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  background: #173b70;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 25%);
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.qnu-footer {
+  position: absolute;
+  bottom: 52px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  width: 100%;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+.admin-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  color: white;
+  background: #173b70;
+  padding: 26px 16px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px 28px;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+.sidebar-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.sidebar-logo h3 {
+  font-size: 17px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar-menu li {
+  padding: 13px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background: rgb(255 255 255 / 15%);
+}
+
+.sidebar-menu .sidebar-logout {
+  margin-top: 20px;
+  color: #fca5a5;
+}
+
+.admin-main-content {
+  min-width: 0;
+  flex: 1;
+  padding: 28px 34px;
+}
+
+.admin-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.admin-main-header h2 {
+  color: #1e293b;
+}
+
+.admin-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-secondary,
+.lock-button {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  padding: 8px 15px;
+}
+
+.btn-warning {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background: #f59e0b;
+  cursor: pointer;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 7%);
+  margin-bottom: 22px;
+  padding: 22px;
+}
+
+.admin-card h3 {
+  color: #1e293b;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.room-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.room-card-header h3 {
+  margin-bottom: 0;
+}
+
+.room-name {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.room-action-button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.room-label {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #1e40af;
+  background: #dbeafe;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.time-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.time-fields label {
+  flex: 1;
+}
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.empty-table {
+  text-align: center !important;
+}
+
+.booking-alert {
+  margin-bottom: 12px;
+  padding: 11px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.booking-alert-error {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.booking-alert-success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.booking-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.booking-search-form label {
+  display: flex;
+  min-width: 130px;
+  flex: 1 1 140px;
+  flex-direction: column;
+  gap: 6px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.booking-search-form input,
+.booking-search-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+}
+
+.booking-search-form input:focus,
+.booking-search-form select:focus {
+  border-color: #173b70;
+  outline: none;
+}
+
+.booking-search-form .btn-primary {
+  flex: 0 0 auto;
+}
+
+.booking-button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  background: #10b981;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.status-in-use {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.empty-search {
+  color: #dc2626;
+  text-align: center;
+}
+
+.admin-form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-form-row input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.admin-form-row input:focus,
+.role-select:focus {
+  border-color: #173b70;
+  outline: none;
+}
+
+.btn-primary {
+  background: #173b70;
+  padding: 10px 16px;
+}
+
+.btn-secondary {
+  background: #64748b;
+  padding: 10px 16px;
+}
+
+.admin-search-row {
+  margin-bottom: 20px;
+}
+
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #475569;
+  font-size: 14px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 13px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.admin-table th {
+  color: #334155;
+  background-color: #f8fafc;
+  font-weight: 700;
+}
+
+.admin-table .user-name {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.role-select {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  padding: 7px;
+}
+
+.incident-description {
+  display: inline-block;
+  max-width: 280px;
+  margin-top: 5px;
+  color: #64748b;
+  white-space: normal;
+}
+
+.incident-image {
+  width: 58px;
+  height: 58px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.stats-loading {
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+  color: #475569;
+  background: #f5f7fb;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.stats-card {
+  flex: 1 1 200px;
+  min-width: 180px;
+  padding: 18px;
+  border-top: 4px solid;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 7%);
+  text-align: center;
+}
+
+.stats-card h1 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.stats-card p {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.stats-rank {
+  color: #374151;
+  font-weight: 700;
+}
+
+.stats-first-place {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.status-locked {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.status-warning {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.status-completed {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.status-in-use {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.action-cell {
+  text-align: right !important;
+}
+
+.booking-action-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.booking-action-group .room-action-button,
+.booking-action-group .btn-primary,
+.booking-action-group .btn-warning {
+  width: 92px;
+  min-height: 32px;
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.edit-button {
+  color: white;
+  background: #173b70;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.lock-button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.lock-button.lock {
+  background: #f59e0b;
+}
+
+.lock-button.unlock {
+  background: #10b981;
+}
+
+.lock-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background: rgb(0 0 0 / 50%);
+}
+
+.modal-content {
+  width: 500px;
+  max-width: 90%;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.close-btn {
+  padding: 0;
+  border: 0;
+  color: #6b7280;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+.extend-hint {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-error {
+  margin-bottom: 15px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.edit-form input,
+.edit-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #173b70;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.student-welcome-panel {
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.student-welcome-panel p {
+  margin-top: 8px;
+}
+
+.student-coming-soon {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px dashed #d1d5db;
+  text-align: center;
+  color: #6b7280;
+}
+
+.student-coming-soon p {
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .qnu-left-bg {
+    display: none;
+  }
+
+  .qnu-right-panel {
+    flex: 1;
+  }
+
+  .admin-sidebar {
+    width: 210px;
+  }
+
+  .admin-main-content {
+    padding: 20px 12px;
+  }
+
+  .admin-form-row {
+    flex-wrap: wrap;
+  }
+
+  .admin-main-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-layout {
+    display: block;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 12px;
+  }
+
+  .sidebar-menu .sidebar-logout {
+    margin-top: 0;
+  }
+}
